@@ -144,7 +144,7 @@ end
 
 # Hash definitino to ensure that it's stable
 function Base.hash(p::Platform)
-    return hash(hash(p.tags), hash(p.compare_strategies), 0x506c6174666f726d)
+    return hash(hash(hash(p.tags), hash(p.compare_strategies)), 0x506c6174666f726d)
 end
 
 # Simple equality definition; for compatibility testing, use `platforms_match()`
